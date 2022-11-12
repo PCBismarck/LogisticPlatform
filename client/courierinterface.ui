@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>courierInterface</class>
+ <widget class="QWidget" name="courierInterface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1050</width>
+    <height>740</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1050</width>
+    <height>740</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1050</width>
+    <height>740</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>快递员</string>
+  </property>
+  <widget class="QLabel" name="label_welcome">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>261</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>欢迎使用快递员系统！</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_balance">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>130</y>
+     <width>141</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>余额：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_show_balance">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>130</y>
+     <width>191</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Button_pick_up">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>360</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>快递揽收</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Button_inquiry">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>460</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>快递查询</string>
+   </property>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>260</y>
+     <width>861</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page_main">
+    <widget class="QTableWidget" name="tableWidget_show_parcel_pickup">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>711</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+    <widget class="QLabel" name="label_title">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>101</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>待揽收快递：</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_pickup">
+     <property name="geometry">
+      <rect>
+       <x>731</x>
+       <y>224</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>揽收选中快递</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_inquiry_parcel">
+    <widget class="QCheckBox" name="checkBox_time">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>341</y>
+       <width>84</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>时间</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_receiver">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>341</y>
+       <width>84</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>接收人</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_sender">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>361</y>
+       <width>84</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>发送人</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_user_name">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>341</y>
+       <width>84</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>用户名</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_parcel_id">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>361</y>
+       <width>84</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>快递ID</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_time">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>341</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_sender">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>361</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_courier">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>361</y>
+       <width>84</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>快递员</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_receiver">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>341</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_by_keyword">
+     <property name="geometry">
+      <rect>
+       <x>730</x>
+       <y>350</y>
+       <width>82</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>条件查询</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_courier">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>360</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_user_name">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>340</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_parcel_id">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>360</y>
+       <width>113</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_all">
+     <property name="geometry">
+      <rect>
+       <x>750</x>
+       <y>120</y>
+       <width>82</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>全部快递</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_pickup_all">
+     <property name="geometry">
+      <rect>
+       <x>750</x>
+       <y>180</y>
+       <width>82</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>已揽收快递</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="tableWidget_show_inquiry_result">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>731</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+    <zorder>pushButton_by_keyword</zorder>
+    <zorder>checkBox_time</zorder>
+    <zorder>checkBox_receiver</zorder>
+    <zorder>checkBox_sender</zorder>
+    <zorder>checkBox_user_name</zorder>
+    <zorder>checkBox_parcel_id</zorder>
+    <zorder>lineEdit_time</zorder>
+    <zorder>lineEdit_sender</zorder>
+    <zorder>checkBox_courier</zorder>
+    <zorder>lineEdit_receiver</zorder>
+    <zorder>lineEdit_courier</zorder>
+    <zorder>lineEdit_user_name</zorder>
+    <zorder>lineEdit_parcel_id</zorder>
+    <zorder>pushButton_all</zorder>
+    <zorder>pushButton_pickup_all</zorder>
+    <zorder>tableWidget_show_inquiry_result</zorder>
+   </widget>
+  </widget>
+  <widget class="QListWidget" name="listWidget_person_info">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>60</y>
+     <width>271</width>
+     <height>161</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Button_log_out">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>30</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>登出</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
